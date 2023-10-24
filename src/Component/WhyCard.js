@@ -1,4 +1,5 @@
 import React from 'react'
+import { COLORS } from '../Assets/Theme'
 
 export default function WhyCard({
     Icon,
@@ -46,7 +47,7 @@ export default function WhyCard({
                     <p style={{
                         fontSize: '16px',
                         fontFamily: "Poppins-Regular",
-                        color: "ButtonText",
+                        color: COLORS.text,
                         marginBlock: 0,
                     }}>{description}</p>
                 </div>

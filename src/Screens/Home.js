@@ -9,6 +9,7 @@ import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { LiaBabyCarriageSolid } from 'react-icons/lia'
 import {BiPhoneCall} from 'react-icons/bi'
 import FlatList from 'flatlist-react/lib';
+import { COLORS } from '../Assets/Theme';
 export default function Home() {
     const [count, setCount] = React.useState(0);
     const data = [
@@ -59,7 +60,7 @@ export default function Home() {
                 <p style={{
                     fontSize: '35px',
                     fontFamily: "LEMONMILK-Bold",
-                    color: "ButtonText",
+                    color: COLORS.text,
                     marginBlock: 0,
                     textAlign: 'center',
                     marginTop: '50px',

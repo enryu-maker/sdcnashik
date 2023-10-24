@@ -9,7 +9,8 @@ export default function Footer() {
                 height: '30vh',
                 backgroundColor: "#212121",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                marginBlockStart: "100px",
             }}
         >
             <div style={{
@@ -21,7 +22,10 @@ export default function Footer() {
                 justifyContent: "space-between",
             }}>
                 <div style={{
+                    display: "flex",
+                    flexDirection: "column",
                     width: "22%",
+                    alignItems: "flex-end",
                 }}>
                     <p style={{
                         fontSize: "20px",
@@ -38,12 +42,16 @@ export default function Footer() {
                         fontFamily: "Poppins-Regular",
                         color: "#ffffff",
                         marginBlock: 0,
+                        textAlign: "right",
                     }}>
                         Lorem ipsum dolor sit amet, adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maece nas lobortis vestibulum ipsum.
                     </p>
                 </div>
                 <div style={{
+                    display: "flex",
+                    flexDirection: "column",
                     width: "22%",
+                    alignItems: "flex-end",
                 }}>
                     <p style={{
                         fontSize: "20px",
@@ -58,6 +66,7 @@ export default function Footer() {
                         fontFamily: "Poppins-Regular",
                         color: "#ffffff",
                         marginBlock: 0,
+                        textAlign: "right",
                     }}>
                         Rentzone office 1: (323) 938-5798
                         Rentzone office 2: (888) 637-7262
@@ -65,7 +74,10 @@ export default function Footer() {
                     </p>
                 </div>
                 <div style={{
-                    width: "22%",
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "24%",
+                    alignItems: "flex-end",
                 }}>
                     <p style={{
                         fontSize: "20px",
@@ -80,13 +92,17 @@ export default function Footer() {
                         fontFamily: "Poppins-Regular",
                         color: "#ffffff",
                         marginBlock: 0,
+                        textAlign: "right",
                     }}>
                         Monday - Friday: 8:00 AM - 8:00 PM
                         Saturday - Sunday: 8:00 AM - 5:00 PM
                     </p>
                 </div>
                 <div style={{
+                    display: "flex",
+                    flexDirection: "column",
                     width: "22%",
+                    alignItems: "center",
                 }}>
                     <p style={{
                         fontSize: "20px",
@@ -98,7 +114,7 @@ export default function Footer() {
                     <div style={{
                         display: "flex",
                         flexDirection: "row",
-                        justifyContent: "flex-start",
+                        justifyContent: "flex-end",
                         alignItems: "center",
                     }}>
                         <div style={{

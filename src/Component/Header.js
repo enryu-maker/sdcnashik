@@ -1,10 +1,15 @@
 import React from 'react'
 import { IMAGES } from '../Assets/Image'
+import { Link, useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { COLORS } from '../Assets/Theme'
 
 export default function Header({
     count,
     setCount
 }) {
+    const target = useLocation()
+    const access = useSelector(state => state.Reducers.access)
     const OnHover = (e) => {
         e.target.style.color = "#b41c19"
         e.target.style.fontFamily = "LEMONMILK-Bold"
@@ -34,7 +39,7 @@ export default function Header({
                 justifyContent: 'space-around',
                 alignItems: 'center',
                 height: '70px',
-                width:"25vw",
+                width: "25vw",
             }}>
                 <img src={IMAGES.icon}
                     style={{
@@ -44,8 +49,8 @@ export default function Header({
                 />
                 <p style={{
                     fontSize: '25px',
-                    fontFamily:"LEMONMILK-Bold",
-                    color: "ButtonText",
+                    fontFamily: "LEMONMILK-Bold",
+                    color: COLORS.text,
                     // marginBlock:0,
                 }}><span style={{
                     color: "#b41c19",
@@ -54,7 +59,7 @@ export default function Header({
                 }}>D</span>RIVE <span style={{
                     color: "#b41c19",
                 }}>C</span>
-                ARS </p>
+                    ARS </p>
             </div>
             <div style={{
                 display: 'flex',
@@ -62,80 +67,148 @@ export default function Header({
                 justifyContent: 'flex-end',
                 alignItems: 'center',
                 height: '70px',
-                width:"60vw",
+                width: "60vw",
                 transition: "all 3s ease",
             }}>
-                <p style={{
-                    fontSize: '18px',
-                    fontFamily:"Poppins-Regular",
-                    color: "ButtonText",
-                    marginBlock:0,
-                    marginRight:"20px",
-                    cursor:"pointer",
-                }}
-                onMouseEnter={OnHover}
-                onMouseLeave={OffHover}
-                onClick={() => {
-                    setCount(0)
-                }}
+                <Link
+                    to={'/'}
+                    style={{
+                        fontSize: '18px',
+                        fontFamily: "Poppins-Regular",
+                        color: COLORS.text,
+                        marginBlock: 0,
+                        marginRight: "20px",
+                        cursor: "pointer",
+                        textDecoration: "none",
+                    }}
+                    onMouseEnter={OnHover}
+                    onMouseLeave={OffHover}
+                    onClick={() => {
+                        setCount(0)
+                    }}
                 >
                     Rent A Car
-                </p>
-                <p style={{
-                    fontSize: '18px',
-                    fontFamily:"Poppins-Regular",
-                    color: "ButtonText",
-                    marginBlock:0,
-                    cursor:"pointer",
-                    marginRight:"20px",
-                }}
-                onMouseEnter={OnHover}
-                onMouseLeave={OffHover}
-                onClick={() => {
-                    setCount(1)
-                }}
+                </Link>
+                <Link
+                    to={"/"}
+                    style={{
+                        fontSize: '18px',
+                        fontFamily: "Poppins-Regular",
+                        color: COLORS.text,
+                        marginBlock: 0,
+                        cursor: "pointer",
+                        marginRight: "20px",
+                        textDecoration: "none",
+                    }}
+                    onMouseEnter={OnHover}
+                    onMouseLeave={OffHover}
+                    onClick={() => {
+                        setCount(1)
+                    }}
                 >
                     Rent A Bike
-                </p>
-                <p style={{
-                    fontSize: '18px',
-                    fontFamily:"Poppins-Regular",
-                    color: "ButtonText",
-                    marginBlock:0,
-                    marginRight:"20px",
-                    cursor:"pointer",
-                }}
-                onMouseEnter={OnHover}
-                onMouseLeave={OffHover}
-                >
-                    Login
-                </p>
-                <p style={{
-                    fontSize: '18px',
-                    fontFamily:"Poppins-Regular",
-                    color: "ButtonText",
-                    marginBlock:0,
-                    marginRight:"20px",
-                    cursor:"pointer",
-                }}
-                onMouseEnter={OnHover}
-                onMouseLeave={OffHover}
-                >
-                    Register
-                </p>
-                <p style={{
-                    fontSize: '18px',
-                    fontFamily:"Poppins-Regular",
-                    color: "ButtonText",
-                    marginBlock:0,
-                    marginRight:"20px",
-                    cursor:"pointer",
-                }}
-                onMouseEnter={OnHover}
-                onMouseLeave={OffHover}
+                </Link>
+                {
+                    access === null ?
+                        <>
+                            <Link
+                                to={"/login"}
+                                style={{
+                                    fontSize: '18px',
+                                    fontFamily: "Poppins-Regular",
+                                    color: COLORS.text,
+                                    marginBlock: 0,
+                                    marginRight: "20px",
+                                    cursor: "pointer",
+                                    textDecoration: "none",
+                                    borderBlockEnd:target.pathname==="/login"?"2px solid #b41c19":null
+                                }}
+                                onMouseEnter={OnHover}
+                                onMouseLeave={OffHover}
+                            >
+                                Login
+                            </Link>
+                            <Link
+                                to={"/register"}
+                                style={{
+                                    fontSize: '18px',
+                                    fontFamily: "Poppins-Regular",
+                                    color: COLORS.text,
+                                    marginBlock: 0,
+                                    marginRight: "20px",
+                                    cursor: "pointer",
+                                    textDecoration: "none",
+                                    borderBlockEnd:target.pathname==="/register"?"2px solid #b41c19":null
+                                }}
+                                onMouseEnter={OnHover}
+                                onMouseLeave={OffHover}
+                            >
+                                Register
+                            </Link>
+                        </>
+                        : null
+                }
+                <Link
+                    to={"/tourpackage"}
+                    style={{
+                        fontSize: '18px',
+                        fontFamily: "Poppins-Regular",
+                        color: COLORS.text,
+                        marginBlock: 0,
+                        marginRight: "20px",
+                        cursor: "pointer",
+                        textDecoration: "none",
+                        borderBlockEnd:target.pathname==="/tourpackage"?"2px solid #b41c19":null
+                    }}
+                    onMouseEnter={OnHover}
+                    onMouseLeave={OffHover}
                 >
                     Tour Package
-                </p>
+                </Link>
+                {
+                    access !== null ?
+                        <>
+                            <Link
+                                to={"/profile"}
+                                style={{
+                                    fontSize: '18px',
+                                    fontFamily: "Poppins-Regular",
+                                    color: COLORS.text,
+                                    marginBlock: 0,
+                                    marginRight: "20px",
+                                    cursor: "pointer",
+                                    textDecoration: "none",
+                                    borderBlockEnd:target.pathname==="/profile"?"2px solid #b41c19":null
+                                }}
+                                onMouseEnter={OnHover}
+                                onMouseLeave={OffHover}
+                            >
+                                Profile
+                            </Link>
+                            <Link
+                                to={"/"}
+                                style={{
+                                    fontSize: '18px',
+                                    fontFamily: "Poppins-Regular",
+                                    color: "#b41c19",
+                                    marginBlock: 0,
+                                    marginRight: "20px",
+                                    cursor: "pointer",
+                                    textDecoration: "none",
+                                }}
+                                onMouseEnter={OnHover}
+                                onMouseLeave={OffHover}
+                                onClick={() => {
+                                    localStorage.clear()
+                                    window.location.reload()
+                                }}
+                            >
+                                Logout
+                            </Link>
+                        </>
+                        : null
+
+                }
             </div>
         </div>
     )
