@@ -5,6 +5,7 @@ import { Controller, set, useForm } from 'react-hook-form'
 import { AiOutlineFileDone, AiOutlineUpload, AiOutlineUser } from 'react-icons/ai';
 import Upload from '../Component/Upload';
 import Loader from '../Component/Loader';
+import useMediaQuery from '../Component/useMediaQuery';
 export default function Register() {
     const {
         handleSubmit,
@@ -23,6 +24,7 @@ export default function Register() {
     const [page1, setPage1] = React.useState(false);
     const [page2, setPage2] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
+    const mobile = useMediaQuery('(max-width: 768px)');
     return (
         <div style={{
             display: "flex",
@@ -32,26 +34,26 @@ export default function Register() {
         }}>
             <Loader loading={loading} />
             <Header count={count} setCount={setCount} />
+            <p style={{
+                fontFamily: "LEMONMILK-Bold",
+                fontSize: '40px',
+                textAlign: 'center',
+                marginTop: '100px',
+                color: "#b41c19",
+            }}>
+                Register
+            </p>
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-evenly',
                 alignItems: 'center',
-                width: "35%",
+                width: mobile?"88%" : "35%",
                 height: "60vh",
                 boxShadow: "5px 5px 10px #88888850",
-                marginBlockStart: "160px",
                 alignSelf: "center",
                 borderRadius: "10px",
             }}>
-                <p style={{
-                    fontSize: "30px",
-                    fontFamily: "LEMONMILK-Bold",
-                    color: "#b41c19",
-                    marginBlock: "10px",
-                }}>
-                    Register Now
-                </p>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -62,7 +64,7 @@ export default function Register() {
                     <div style={{
                         height: 2,
                         width: '10%',
-                        backgroundColor:page1? "green": '#b41c19',
+                        backgroundColor: page1 ? "green" : '#b41c19',
                     }} />
                     <div style={{
                         display: 'flex',
@@ -74,25 +76,25 @@ export default function Register() {
                             display: 'flex',
                             height: 40,
                             width: 40,
-                            border:page? "none":"2px solid #b41c19",
+                            border: page ? "none" : "2px solid #b41c19",
                             borderRadius: 25,
                             justifyContent: 'center',
                             alignItems: 'center',
                             fontFamily: "LEMONMILK-Bold",
                             color: "white",
-                            backgroundColor:page1? "green":"transparent",
+                            backgroundColor: page1 ? "green" : "transparent",
                             letterSpacing: 2,
                         }}
                             onClick={() => {
                                 setPage(0)
                             }}
                         >
-                            <AiOutlineUser size={20} color={page1?"white":"#b41c19"} />
+                            <AiOutlineUser size={20} color={page1 ? "white" : "#b41c19"} />
                         </button>
                         <p style={{
                             fontSize: "12px",
                             fontFamily: "Poppins-Regular",
-                            color: page1? "green":"#b41c19",
+                            color: page1 ? "green" : "#b41c19",
                             marginBlock: "10px",
                         }}>
                             Personal Details
@@ -101,7 +103,7 @@ export default function Register() {
                     <div style={{
                         height: 2,
                         width: '20%',
-                        backgroundColor:page1? "green": '#b41c19',
+                        backgroundColor: page1 ? "green" : '#b41c19',
                     }} />
                     <div style={{
                         display: 'flex',
@@ -115,22 +117,22 @@ export default function Register() {
                             alignItems: 'center',
                             height: 40,
                             width: 40,
-                            border: page2 ? "none":"2px solid #b41c19",
+                            border: page2 ? "none" : "2px solid #b41c19",
                             borderRadius: 25,
                             fontFamily: "LEMONMILK-Bold",
                             color: "white",
-                            backgroundColor: page2?"green":"transparent",
+                            backgroundColor: page2 ? "green" : "transparent",
                         }}
                             onClick={() => {
                                 setPage(0)
                             }}
                         >
-                            <AiOutlineUpload size={20} color={page2?"white":"#b41c19"} />
+                            <AiOutlineUpload size={20} color={page2 ? "white" : "#b41c19"} />
                         </button>
                         <p style={{
                             fontSize: "12px",
                             fontFamily: "Poppins-Regular",
-                            color:page2?"green": "#b41c19",
+                            color: page2 ? "green" : "#b41c19",
                             marginBlock: "10px",
                         }}>
                             Upload Documents
@@ -139,7 +141,7 @@ export default function Register() {
                     <div style={{
                         height: 2,
                         width: '10%',
-                        backgroundColor:page2?"green": '#b41c19',
+                        backgroundColor: page2 ? "green" : '#b41c19',
                     }} />
                 </div>
                 {
@@ -308,10 +310,10 @@ export default function Register() {
                             <div style={{
                                 display: 'flex',
                                 flexDirection: 'row',
-                                justifyContent: 'flex-end', 
+                                justifyContent: 'flex-end',
                                 alignItems: 'center',
                                 width: '85%',
-                            }}> 
+                            }}>
                                 <button style={{
                                     height: 45,
                                     width: "40%",

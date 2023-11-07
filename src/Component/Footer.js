@@ -1,12 +1,15 @@
 import React from 'react'
 import { AiFillFacebook, AiFillTwitterCircle, AiFillInstagram } from 'react-icons/ai';
+import useMediaQuery from './useMediaQuery';
 export default function Footer() {
+    const mobile = useMediaQuery('(max-width: 768px)');
     return (
         <div
             style={{
                 display: 'flex',
+                flexDirection: mobile?'column':"row",
                 width: '100vw',
-                height: '30vh',
+                // height: '30vh',
                 backgroundColor: "#212121",
                 alignItems: "center",
                 justifyContent: "center",
@@ -15,17 +18,18 @@ export default function Footer() {
         >
             <div style={{
                 display: 'flex',
-                flexDirection: "row",
-                width: "88%",
-                // backgroundColor:"ActiveBorder",
+                flexDirection: mobile?'column':"row",
+                width:mobile?"100%" : "88%",
                 alignSelf: "center",
                 justifyContent: "space-between",
+                marginBlock:20
             }}>
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    width: "22%",
-                    alignItems: "flex-end",
+                    alignItems:mobile?"flex-start" : "flex-end",
+                    width:mobile?"90%" : "22%",
+                    alignSelf: "center",
                 }}>
                     <p style={{
                         fontSize: "20px",
@@ -41,8 +45,8 @@ export default function Footer() {
                         fontSize: "16px",
                         fontFamily: "Poppins-Regular",
                         color: "#ffffff",
+                        textAlign: mobile?"justify" : "right",
                         marginBlock: 0,
-                        textAlign: "right",
                     }}>
                         Lorem ipsum dolor sit amet, adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maece nas lobortis vestibulum ipsum.
                     </p>
@@ -50,8 +54,9 @@ export default function Footer() {
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    width: "22%",
-                    alignItems: "flex-end",
+                    alignItems:mobile?"flex-start" : "flex-end",
+                    width:mobile?"90%" : "22%",
+                    alignSelf: "center",
                 }}>
                     <p style={{
                         fontSize: "20px",
@@ -65,8 +70,8 @@ export default function Footer() {
                         fontSize: "16px",
                         fontFamily: "Poppins-Regular",
                         color: "#ffffff",
+                        textAlign: mobile?"justify" : "right",
                         marginBlock: 0,
-                        textAlign: "right",
                     }}>
                         Rentzone office 1: (323) 938-5798
                         Rentzone office 2: (888) 637-7262
@@ -76,8 +81,9 @@ export default function Footer() {
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    width: "24%",
-                    alignItems: "flex-end",
+                    alignItems:mobile?"flex-start" : "flex-end",
+                    width:mobile?"90%" : "24%",
+                    alignSelf: "center",
                 }}>
                     <p style={{
                         fontSize: "20px",
@@ -92,17 +98,17 @@ export default function Footer() {
                         fontFamily: "Poppins-Regular",
                         color: "#ffffff",
                         marginBlock: 0,
-                        textAlign: "right",
+                        textAlign: mobile?"justify" : "right",
                     }}>
-                        Monday - Friday: 8:00 AM - 8:00 PM
-                        Saturday - Sunday: 8:00 AM - 5:00 PM
+                        Monday - Sunday: 24/7
                     </p>
                 </div>
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    width: "22%",
-                    alignItems: "center",
+                    alignItems:mobile?"flex-start" : "flex-end",
+                    width:mobile?"90%" : "22%",
+                    alignSelf: "center",
                 }}>
                     <p style={{
                         fontSize: "20px",

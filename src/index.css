@@ -2,17 +2,25 @@
   font-family: 'Poppins-Bold';
   src: local('Poppins'), url(./Assets/Poppins/Poppins-Bold.ttf) format('truetype');
 }
+
 @font-face {
   font-family: 'Poppins-Regular';
   src: local('Poppins'), url(./Assets/Poppins/Poppins-Regular.ttf) format('truetype');
 }
+
 @font-face {
   font-family: 'Poppins-SemiBold';
   src: local('Poppins'), url(./Assets/Poppins/Poppins-SemiBold.ttf) format('truetype');
 }
+
 @font-face {
   font-family: 'LEMONMILK-Bold';
   src: local('LEMONMILK'), url(./Assets/Poppins/LEMONMILK-Bold.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-LightItalic';
+  src: local('Poppins'), url(./Assets/Poppins/Poppins-LightItalic.ttf) format('truetype');
 }
 
 body {
@@ -20,9 +28,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-*{
+
+* {
   -ms-overflow-style: none;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }

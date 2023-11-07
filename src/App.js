@@ -6,6 +6,7 @@ import Login from './Screens/Login'
 import Register from './Screens/Register'
 import Tour from './Screens/Tour'
 import Profile from './Screens/Profile'
+import Comercial from './Screens/Comercial'
 
 export default function App() {
   const [loading, setLoading] = React.useState(true)
@@ -42,6 +43,8 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/tourpackage" element={<Tour />} />
+        <Route path="/commercialpackage" element={<Comercial />} />
+
       </Routes>
     )
 }

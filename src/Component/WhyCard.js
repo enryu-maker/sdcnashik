@@ -1,18 +1,20 @@
 import React from 'react'
 import { COLORS } from '../Assets/Theme'
+import useMediaQuery from './useMediaQuery'
 
 export default function WhyCard({
     Icon,
     title,
     description
 }) {
+    const mobile = useMediaQuery('(max-width: 768px)');
     return (
         <div style={{
-            height: '200px',
+            // height: '250px',
             width: '400px',
-            backgroundColor: 'white',
             marginBlock: '20px',
             padding: '10px',
+            alignSelf: 'flex-start',
         }}>
             <div style={{
                 display: 'flex',
@@ -39,16 +41,17 @@ export default function WhyCard({
                     alignSelf: 'center',
                 }}>
                     <p style={{
-                        fontSize: '20px',
+                        fontSize: mobile? "18px" : '20px',
                         fontFamily: "Poppins-Bold",
                         color: "#b41c19",
                         marginBlock: 0,
                     }}>{title}</p>
                     <p style={{
-                        fontSize: '16px',
+                        fontSize: mobile?"14px" : '16px',
                         fontFamily: "Poppins-Regular",
                         color: COLORS.text,
                         marginBlock: 0,
+                        textAlign: 'justify',
                     }}>{description}</p>
                 </div>
 
