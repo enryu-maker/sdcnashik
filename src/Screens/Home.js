@@ -26,19 +26,19 @@ export default function Home() {
             description: "you're not just renting a vehicle; you're opting for excellence, reliability, and the assurance of top-tier transportation. We take pride in our dedication to maintaining a premium fleet that meets and exceeds your expectations, and we look forward to serving you with the utmost quality and professionalism."
         },
         {
-            Icon: HiOutlineLocationMarker,
-            title: "GPS on Every Vehicle!",
-            description: "GPS on Every Vehicle! is our commitment to making your travel experience as convenient and stress-free as possible. We understand that navigation is a crucial part of any journey, and that's why we've equipped all our vehicles with GPS systems."
-        },
-        {
             Icon: LiaBabyCarriageSolid,
             title: "Baby Chairs/Booster Seats",
             description: "At our car and bike rental company, safety and comfort are paramount, and that extends to the youngest members of your family. We offer baby chairs and booster seats to ensure that even the tiniest passengers travel securely. Our top-of-the-line, safety-approved baby chairs and booster seats provide the necessary support to keep your child safe and comfortable throughout the journey."
         },
         {
+            Icon: LiaBabyCarriageSolid,
+            title: "F",
+            description: "At our car and bike rental company, safety and comfort are paramount, and that extends to the youngest members of your family. We offer baby chairs and booster seats to ensure that even the tiniest passengers travel securely. Our top-of-the-line, safety-approved baby chairs and booster seats provide the necessary support to keep your child safe and comfortable throughout the journey."
+        },
+        {
             Icon: AiOutlineSetting,
-            title: "AT/MT Transmission",
-            description: "It's an excellent choice for enthusiasts who appreciate the art of driving. At our rental company, we understand that preferences vary, and that's why we offer a range of vehicles with both AT and MT options. Whether you're seeking convenience or a more interactive driving experience, we've got you covered."
+            title: "MT Transmission",
+            description: "It's an excellent choice for enthusiasts who appreciate the art of driving. At our rental company, we understand that preferences vary, and that's why we offer a range of vehicles with  MT options. Whether you're seeking convenience or a more interactive driving experience, we've got you covered."
         },
         {
             Icon: BiPhoneCall,

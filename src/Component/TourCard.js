@@ -7,6 +7,9 @@ export default function TourCard({
     price,
     text,
     location,
+    setShow,
+    setData,
+    data
 }) {
     return (
         <div
@@ -86,8 +89,14 @@ export default function TourCard({
                 fontFamily: "LEMONMILK-Bold",
                 fontSize: '20px',
                 letterSpacing: '0.5px',
-                paddingInline:10
-            }}>
+                paddingInline:10,
+                cursor:"pointer",
+            }}
+            onClick={()=>{
+                setShow(true);
+                setData({...data,name:name,price:price})
+            }}
+            >
                 {
                     price ?
                         "Book Now"

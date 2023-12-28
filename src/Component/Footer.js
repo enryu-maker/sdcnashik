@@ -7,7 +7,7 @@ export default function Footer() {
         <div
             style={{
                 display: 'flex',
-                flexDirection: mobile?'column':"row",
+                flexDirection: mobile ? 'column' : "row",
                 width: '100vw',
                 // height: '30vh',
                 backgroundColor: "#212121",
@@ -18,17 +18,17 @@ export default function Footer() {
         >
             <div style={{
                 display: 'flex',
-                flexDirection: mobile?'column':"row",
-                width:mobile?"100%" : "88%",
+                flexDirection: mobile ? 'column' : "row",
+                width: mobile ? "100%" : "88%",
                 alignSelf: "center",
                 justifyContent: "space-between",
-                marginBlock:20
+                marginBlock: 20
             }}>
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems:mobile?"flex-start" : "flex-end",
-                    width:mobile?"90%" : "22%",
+                    alignItems: mobile ? "flex-start" : "flex-end",
+                    width: mobile ? "90%" : "22%",
                     alignSelf: "center",
                 }}>
                     <p style={{
@@ -45,17 +45,17 @@ export default function Footer() {
                         fontSize: "16px",
                         fontFamily: "Poppins-Regular",
                         color: "#ffffff",
-                        textAlign: mobile?"justify" : "right",
+                        textAlign: mobile ? "justify" : "right",
                         marginBlock: 0,
                     }}>
-                        Lorem ipsum dolor sit amet, adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maece nas lobortis vestibulum ipsum.
+                        SELF DRIVE CARS NASHIK (is unit of Agrawal Group) is Nashik's first self drive car rental service provider. We provide self drive car rental services in Mumbai, Pune, Nashik, Shirdi, Nagpur and all over India.
                     </p>
                 </div>
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems:mobile?"flex-start" : "flex-end",
-                    width:mobile?"90%" : "22%",
+                    alignItems: mobile ? "flex-start" : "flex-end",
+                    width: mobile ? "90%" : "22%",
                     alignSelf: "center",
                 }}>
                     <p style={{
@@ -70,19 +70,19 @@ export default function Footer() {
                         fontSize: "16px",
                         fontFamily: "Poppins-Regular",
                         color: "#ffffff",
-                        textAlign: mobile?"justify" : "right",
+                        textAlign: mobile ? "justify" : "right",
                         marginBlock: 0,
                     }}>
-                        Rentzone office 1: (323) 938-5798
-                        Rentzone office 2: (888) 637-7262
-                        Email: rent@zone.com
+                        7385309348
+                        Cabin no 8, jagdish sankul kbt circle above welness forever, Nashik, Maharashtra 422005
+                        selfdrivecars003@gmail.com
                     </p>
                 </div>
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems:mobile?"flex-start" : "flex-end",
-                    width:mobile?"90%" : "24%",
+                    alignItems: mobile ? "flex-start" : "flex-end",
+                    width: mobile ? "90%" : "24%",
                     alignSelf: "center",
                 }}>
                     <p style={{
@@ -98,16 +98,16 @@ export default function Footer() {
                         fontFamily: "Poppins-Regular",
                         color: "#ffffff",
                         marginBlock: 0,
-                        textAlign: mobile?"justify" : "right",
+                        textAlign: mobile ? "justify" : "right",
                     }}>
-                        Monday - Sunday: 24/7
+                        Monday - Sunday: 9:00 AM - 11:00 PM
                     </p>
                 </div>
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
-                    alignItems:mobile?"flex-start" : "flex-end",
-                    width:mobile?"90%" : "22%",
+                    alignItems: mobile ? "flex-start" : "flex-end",
+                    width: mobile ? "90%" : "22%",
                     alignSelf: "center",
                 }}>
                     <p style={{

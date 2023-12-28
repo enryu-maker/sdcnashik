@@ -42,7 +42,7 @@ export default function Header({
                     justifyContent: 'space-around',
                     alignItems: 'center',
                     height: '70px',
-                    width: "25vw",
+                    width: "30vw",
                 }}>
                     <img 
                     alt='icon'
@@ -58,11 +58,11 @@ export default function Header({
                             null :
 
                             <p style={{
-                                fontSize: '25px',
+                                fontSize: '20px',
                                 fontFamily: "LEMONMILK-Bold",
                                 color: COLORS.text,
                                 // marginBlock:0,
-                            }}>SELF DRIVE CARS </p>
+                            }}>SELF DRIVE CARS NASHIK</p>
                     }
                 </div>
 
@@ -128,46 +128,6 @@ export default function Header({
                                 >
                                     Rent A Bike
                                 </Link>
-                                {
-                                    access === null ?
-                                        <>
-                                            <Link
-                                                to={"/login"}
-                                                style={{
-                                                    fontSize: '18px',
-                                                    fontFamily: "Poppins-Regular",
-                                                    color: COLORS.text,
-                                                    marginBlock: 0,
-                                                    marginRight: "20px",
-                                                    cursor: "pointer",
-                                                    textDecoration: "none",
-                                                    borderBlockEnd: target.pathname === "/login" ? "2px solid #b41c19" : null
-                                                }}
-                                                onMouseEnter={OnHover}
-                                                onMouseLeave={OffHover}
-                                            >
-                                                Login
-                                            </Link>
-                                            <Link
-                                                to={"/register"}
-                                                style={{
-                                                    fontSize: '18px',
-                                                    fontFamily: "Poppins-Regular",
-                                                    color: COLORS.text,
-                                                    marginBlock: 0,
-                                                    marginRight: "20px",
-                                                    cursor: "pointer",
-                                                    textDecoration: "none",
-                                                    borderBlockEnd: target.pathname === "/register" ? "2px solid #b41c19" : null
-                                                }}
-                                                onMouseEnter={OnHover}
-                                                onMouseLeave={OffHover}
-                                            >
-                                                Register
-                                            </Link>
-                                        </>
-                                        : null
-                                }
                                 <Link
                                     to={"/tourpackage"}
                                     style={{
@@ -200,52 +160,8 @@ export default function Header({
                                     onMouseEnter={OnHover}
                                     onMouseLeave={OffHover}
                                 >
-                                    Commercial Package
+                                    Corporate Package
                                 </Link>
-                                {
-                                    access !== null ?
-                                        <>
-                                            <Link
-                                                to={"/profile"}
-                                                style={{
-                                                    fontSize: '18px',
-                                                    fontFamily: "Poppins-Regular",
-                                                    color: COLORS.text,
-                                                    marginBlock: 0,
-                                                    marginRight: "20px",
-                                                    cursor: "pointer",
-                                                    textDecoration: "none",
-                                                    borderBlockEnd: target.pathname === "/profile" ? "2px solid #b41c19" : null
-                                                }}
-                                                onMouseEnter={OnHover}
-                                                onMouseLeave={OffHover}
-                                            >
-                                                Profile
-                                            </Link>
-                                            <Link
-                                                to={"/"}
-                                                style={{
-                                                    fontSize: '18px',
-                                                    fontFamily: "Poppins-Regular",
-                                                    color: "#b41c19",
-                                                    marginBlock: 0,
-                                                    marginRight: "20px",
-                                                    cursor: "pointer",
-                                                    textDecoration: "none",
-                                                }}
-                                                onMouseEnter={OnHover}
-                                                onMouseLeave={OffHover}
-                                                onClick={() => {
-                                                    localStorage.clear()
-                                                    window.location.reload()
-                                                }}
-                                            >
-                                                Logout
-                                            </Link>
-                                        </>
-                                        :
-                                        null
-                                }
                             </>
                     }
                 </div>
@@ -311,55 +227,6 @@ export default function Header({
                             >
                                 Rent A Bike
                             </Link>
-                            {
-                                access === null ?
-                                    <>
-                                        <Link
-                                            to={"/login"}
-                                            style={{
-                                                width: "50%",
-
-                                                fontSize: '18px',
-                                                fontFamily: "Poppins-Regular",
-                                                color: COLORS.text,
-                                                marginBlock: 0,
-                                                marginRight: "20px",
-                                                cursor: "pointer",
-                                                textDecoration: "none",
-                                                borderBlockEnd: target.pathname === "/login" ? "2px solid #b41c19" : null
-                                            }}
-                                            onMouseEnter={OnHover}
-                                            onMouseLeave={OffHover}
-                                            onClick={() => {
-                                                setShow(false)
-                                            }}
-                                        >
-                                            Login
-                                        </Link>
-                                        <Link
-                                            to={"/register"}
-                                            style={{
-                                                width: "50%",
-                                                fontSize: '18px',
-                                                fontFamily: "Poppins-Regular",
-                                                color: COLORS.text,
-                                                marginBlock: 0,
-                                                marginRight: "20px",
-                                                cursor: "pointer",
-                                                textDecoration: "none",
-                                                borderBlockEnd: target.pathname === "/register" ? "2px solid #b41c19" : null
-                                            }}
-                                            onMouseEnter={OnHover}
-                                            onMouseLeave={OffHover}
-                                            onClick={() => {
-                                                setShow(false)
-                                            }}
-                                        >
-                                            Register
-                                        </Link>
-                                    </>
-                                    : null
-                            }
                             <Link
                                 to={"/tourpackage"}
                                 style={{
@@ -402,55 +269,6 @@ export default function Header({
                             >
                                 Commercial Package
                             </Link>
-                            {
-                                access !== null ?
-                                    <>
-                                        <Link
-                                            to={"/profile"}
-                                            style={{
-                                                fontSize: '18px',
-                                                fontFamily: "Poppins-Regular",
-                                                color: COLORS.text,
-                                                marginBlock: 0,
-                                                marginRight: "20px",
-                                                cursor: "pointer",
-                                                textDecoration: "none",
-                                                borderBlockEnd: target.pathname === "/profile" ? "2px solid #b41c19" : null
-                                            }}
-                                            onMouseEnter={OnHover}
-                                            onMouseLeave={OffHover}
-                                            onClick={() => {
-                                                setShow(false)
-                                            }}
-                                        >
-                                            Profile
-                                        </Link>
-                                        <Link
-                                            to={"/"}
-                                            style={{
-                                                fontSize: '18px',
-                                                fontFamily: "Poppins-Regular",
-                                                color: "#b41c19",
-                                                marginBlock: 0,
-                                                marginRight: "20px",
-                                                cursor: "pointer",
-                                                textDecoration: "none",
-                                                width: "50%"
-                                            }}
-                                            onMouseEnter={OnHover}
-                                            onMouseLeave={OffHover}
-                                            onClick={() => {
-                                                setShow(false)
-                                                localStorage.clear()
-                                                window.location.reload()
-                                            }}
-                                        >
-                                            Logout
-                                        </Link>
-                                    </>
-                                    :
-                                    null
-                            }
                         </div>
                     </div>
                     : null

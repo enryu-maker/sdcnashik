@@ -3,9 +3,12 @@ import { useForm, Controller } from 'react-hook-form';
 import { MdDone } from 'react-icons/md';
 import { COLORS } from '../Assets/Theme';
 import useMediaQuery from './useMediaQuery';
+import { useDispatch } from 'react-redux';
+import { BookCar } from '../Store/action';
 export default function HomeCard({
     count
 }) {
+    const dispatch = useDispatch();
     const {
         handleSubmit,
         control,
@@ -63,7 +66,7 @@ export default function HomeCard({
                         height:mobile?"100%" : '80%',
                     }}>
                         <Controller
-                            name='pickup'
+                            name='pickupLocation'
                             control={control}
                             defaultValue=''
                             rules={{
@@ -97,30 +100,29 @@ export default function HomeCard({
                                             color: COLORS.text
                                         }}
                                         placeholder='Choose Pickup Location*'
-                                        // value={passwordText}
+                                        value={value}
                                         onChange={(text) => {
                                             onChange(text);
                                         }}
                                     >
                                         <option value="" disabled selected>Choose Pickup Location*</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
+                                        <option value="Nashik">Nashik</option>
                                     </select>
-                                    {errors.pickup && (
+                                    {errors.pickupLocation && (
                                         <p style={{
                                             fontSize: '12px',
                                             fontFamily: "Poppins-Regular",
                                             color: "red",
                                             marginBlock: 0,
                                         }}>
-                                            {errors.pickup.message}
+                                            {errors.pickupLocation.message}
                                         </p>
                                     )}
                                 </div>
                             )}
                         />
                         <Controller
-                            name='delivery'
+                            name='dropLocation'
                             control={control}
                             defaultValue=''
                             rules={{
@@ -154,30 +156,32 @@ export default function HomeCard({
                                             color: COLORS.text
                                         }}
                                         placeholder='Delivery*'
-                                        // value={passwordText}
+                                        value={value}
                                         onChange={(text) => {
                                             onChange(text);
                                         }}
                                     >
                                         <option value="" disabled selected>Choose Delivery Location*</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
+                                        <option value="Mumbai">Mumbai</option>
+                                        <option value="Pune">Pune</option>
+                                        <option value="Nashik">Nashik</option>
+
                                     </select>
-                                    {errors.delivery && (
+                                    {errors.dropLocation && (
                                         <p style={{
                                             fontSize: '12px',
                                             fontFamily: "Poppins-Regular",
                                             color: "red",
                                             marginBlock: 0,
                                         }}>
-                                            {errors.delivery.message}
+                                            {errors.dropLocation.message}
                                         </p>
                                     )}
                                 </div>
                             )}
                         />
                         <Controller
-                            name='pickupdate'
+                            name='pickupDate'
                             control={control}
                             defaultValue=''
                             rules={{
@@ -212,26 +216,26 @@ export default function HomeCard({
                                         }}
                                         placeholder='Pickup Date*'
                                         type='date'
-                                        // value={passwordText}
+                                        value={value}
                                         onChange={(text) => {
                                             onChange(text);
                                         }}
                                     />
-                                    {errors.delivery && (
+                                    {errors.pickupDate && (
                                         <p style={{
                                             fontSize: '12px',
                                             fontFamily: "Poppins-Regular",
                                             color: "red",
                                             marginBlock: 0,
                                         }}>
-                                            {errors.delivery.message}
+                                            {errors.pickupDate.message}
                                         </p>
                                     )}
                                 </div>
                             )}
                         />
                         <Controller
-                            name='returndate'
+                            name='deliveryDate'
                             control={control}
                             defaultValue=''
                             rules={{
@@ -266,19 +270,19 @@ export default function HomeCard({
                                         }}
                                         placeholder='Pickup Date*'
                                         type='date'
-                                        // value={passwordText}
+                                        value={value}
                                         onChange={(text) => {
                                             onChange(text);
                                         }}
                                     />
-                                    {errors.delivery && (
+                                    {errors.deliveryDate && (
                                         <p style={{
                                             fontSize: '12px',
                                             fontFamily: "Poppins-Regular",
                                             color: "red",
                                             marginBlock: 0,
                                         }}>
-                                            {errors.delivery.message}
+                                            {errors.deliveryDate.message}
                                         </p>
                                     )}
                                 </div>
@@ -286,7 +290,7 @@ export default function HomeCard({
                         />
 
                         <Controller
-                            name='pickuptime'
+                            name='pickupTime'
                             control={control}
                             defaultValue=''
                             rules={{
@@ -321,26 +325,26 @@ export default function HomeCard({
                                         }}
                                         placeholder='Pickup Date*'
                                         type='time'
-                                        // value={passwordText}
+                                        value={value}
                                         onChange={(text) => {
                                             onChange(text);
                                         }}
                                     />
-                                    {errors.delivery && (
+                                    {errors.pickupTime && (
                                         <p style={{
                                             fontSize: '12px',
                                             fontFamily: "Poppins-Regular",
                                             color: "red",
                                             marginBlock: 0,
                                         }}>
-                                            {errors.delivery.message}
+                                            {errors.pickupTime.message}
                                         </p>
                                     )}
                                 </div>
                             )}
                         />
                         <Controller
-                            name='deliverytime'
+                            name='deliveryTime'
                             control={control}
                             defaultValue=''
                             rules={{
@@ -375,19 +379,127 @@ export default function HomeCard({
                                         }}
                                         placeholder='Pickup Date*'
                                         type='time'
-                                        // value={passwordText}
+                                        value={value}
                                         onChange={(text) => {
                                             onChange(text);
                                         }}
                                     />
-                                    {errors.delivery && (
+                                    {errors.deliveryTime && (
                                         <p style={{
                                             fontSize: '12px',
                                             fontFamily: "Poppins-Regular",
                                             color: "red",
                                             marginBlock: 0,
                                         }}>
-                                            {errors.delivery.message}
+                                            {errors.deliveryTime.message}
+                                        </p>
+                                    )}
+                                </div>
+                            )}
+                        />
+                        <Controller
+                            name='email'
+                            control={control}
+                            defaultValue=''
+                            rules={{
+                                required: {
+                                    value: true,
+                                    message:
+                                        'Pickup Cannot be Empty',
+                                },
+                            }}
+                            render={({ field: { onChange, value } }) => (
+                                <div style={{
+                                    width: mobile?"90%" : "45%",
+                                }}>
+                                    <p style={{
+                                        fontSize: '14px',
+                                        fontFamily: "Poppins-Regular",
+                                        color: COLORS.text,
+                                        marginBlock: 0,
+                                    }}>
+                                        Email
+                                    </p>
+                                    <input
+                                        style={{
+                                            height: 35,
+                                            width: "98%",
+                                            border: "2px solid lightGray",
+                                            borderRadius: 6,
+                                            fontFamily: "Poppins-Regular",
+                                            fontSize: 16,
+                                            // paddingInline: 10,
+                                            color: COLORS.text
+                                        }}
+                                        placeholder='Pickup Date*'
+                                        type='email'
+                                        value={value}
+                                        onChange={(text) => {
+                                            onChange(text);
+                                        }}
+                                    />
+                                    {errors.email && (
+                                        <p style={{
+                                            fontSize: '12px',
+                                            fontFamily: "Poppins-Regular",
+                                            color: "red",
+                                            marginBlock: 0,
+                                        }}>
+                                            {errors.email.message}
+                                        </p>
+                                    )}
+                                </div>
+                            )}
+                        />
+                        <Controller
+                            name='mobile'
+                            control={control}
+                            defaultValue=''
+                            rules={{
+                                required: {
+                                    value: true,
+                                    message:
+                                        'Name Cannot be Empty',
+                                },
+                            }}
+                            render={({ field: { onChange, value } }) => (
+                                <div style={{
+                                    width: mobile?"90%" : "45%",
+                                    marginBlockEnd:mobile?20:0
+                                }}>
+                                    <p style={{
+                                        fontSize: '14px',
+                                        fontFamily: "Poppins-Regular",
+                                        color: COLORS.text,
+                                        marginBlock: 0,
+                                    }}>
+                                        Mobile
+                                    </p>
+                                    <input
+                                        style={{
+                                            height: 35,
+                                            width: "98%",
+                                            border: "2px solid lightGray",
+                                            borderRadius: 6,
+                                            fontFamily: "Poppins-Regular",
+                                            fontSize: 16,
+                                            color: COLORS.text
+                                        }}
+                                        placeholder='Mobile*'
+                                        type='number'
+                                        value={value}
+                                        onChange={(text) => {
+                                            onChange(text);
+                                        }}
+                                    />
+                                    {errors.name && (
+                                        <p style={{
+                                            fontSize: '12px',
+                                            fontFamily: "Poppins-Regular",
+                                            color: "red",
+                                            marginBlock: 0,
+                                        }}>
+                                            {errors.name.message}
                                         </p>
                                     )}
                                 </div>
@@ -404,7 +516,12 @@ export default function HomeCard({
                             fontSize: '20px',
                             letterSpacing: '0.5px',
                             paddingInline: 10,
-                        }}>
+                        }}
+                        onClick={handleSubmit((data) => {
+                            data["type"]= Vehicle[count].name;
+                            dispatch(BookCar(data))
+                        })}
+                        >
                             Book Now
                         </button>
 
