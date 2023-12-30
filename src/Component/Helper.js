@@ -1,8 +1,8 @@
 import axios from "axios";
-export const baseURL = 'http://13.50.165.29:4000/SDC'
+export const baseURL = 'https://api-nerdtech.sdcnashik.com/SDC'
 let headers = {};
 const axiosIns = axios.create({
-    baseURL: 'http://13.50.165.29:4000/SDC',
+    baseURL: 'https://api-nerdtech.sdcnashik.com/SDC',
     headers,
 });
 axiosIns.interceptors.request.use(
