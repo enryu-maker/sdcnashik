@@ -94,7 +94,7 @@ export default function TourCard({
             }}
             onClick={()=>{
                 setShow(true);
-                setData({...data,name:name,price:price})
+                setData({name:name,price:price})
             }}
             >
                 {

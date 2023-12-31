@@ -83,6 +83,7 @@ export default function Header({
                                 style={{
                                     height: 30,
                                     width: 30,
+                                    marginRight: "20px",
                                 }}
                                 onClick={() => {
                                     setShow(!show)

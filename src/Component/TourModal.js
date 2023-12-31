@@ -182,19 +182,14 @@ export default function TourModal({
                     onClick={handleSubmit((data) => {
                         data["TourName"] = dataf.name
                         data["Rs"] = dataf.price
-                        console.log(data)
-                        dispatch(BookTour(data, setLoading))
-                        setShow(false)
+                        dispatch(BookTour(data, setLoading, setShow))
                     }
                     )}
                 >
                     {
                         loading ?
-                            <Oval
-                                color="#fff"
-                                height={20}
-                                width={20}
-                            /> :
+                            "Loading..."
+                            :
 
                             "Book Now"
                     }

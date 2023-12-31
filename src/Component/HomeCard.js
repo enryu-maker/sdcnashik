@@ -25,6 +25,7 @@ export default function HomeCard({
         },
     ]
     const mobile = useMediaQuery('(max-width: 768px)');
+    const [loading,setLoading] = React.useState(false)
     return (
         <>
             <div
@@ -431,7 +432,7 @@ export default function HomeCard({
                                             // paddingInline: 10,
                                             color: COLORS.text
                                         }}
-                                        placeholder='Pickup Date*'
+                                        placeholder='User Email*'
                                         type='email'
                                         value={value}
                                         onChange={(text) => {
@@ -519,10 +520,13 @@ export default function HomeCard({
                         }}
                         onClick={handleSubmit((data) => {
                             data["type"]= Vehicle[count].name;
-                            dispatch(BookCar(data))
+                            console.log(data);
+                            dispatch(BookCar(data,setLoading))
                         })}
                         >
-                            Book Now
+                            {
+                                loading?"Loading...":"Book Now"
+                            }
                         </button>
 
                     </div>

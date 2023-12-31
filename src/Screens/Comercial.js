@@ -11,6 +11,7 @@ export default function Comercial() {
     name: "",
     price: "",
   })
+  console.log(Data)
   return (
     <div style={{
       display: 'flex',
@@ -19,8 +20,8 @@ export default function Comercial() {
       justifyContent: 'center',
       alignItems: 'center',
     }}>
-      <TourModal setShow={setShow} show={show} />
-      <Header count={count} setCount={setCount} dataf={Data} />
+      <TourModal setShow={setShow} show={show} dataf={Data} />
+      <Header count={count} setCount={setCount}  />
       <p style={{
         fontFamily: "LEMONMILK-Bold",
         fontSize: '40px',

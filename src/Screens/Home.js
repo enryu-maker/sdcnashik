@@ -31,11 +31,6 @@ export default function Home() {
             description: "At our car and bike rental company, safety and comfort are paramount, and that extends to the youngest members of your family. We offer baby chairs and booster seats to ensure that even the tiniest passengers travel securely. Our top-of-the-line, safety-approved baby chairs and booster seats provide the necessary support to keep your child safe and comfortable throughout the journey."
         },
         {
-            Icon: LiaBabyCarriageSolid,
-            title: "F",
-            description: "At our car and bike rental company, safety and comfort are paramount, and that extends to the youngest members of your family. We offer baby chairs and booster seats to ensure that even the tiniest passengers travel securely. Our top-of-the-line, safety-approved baby chairs and booster seats provide the necessary support to keep your child safe and comfortable throughout the journey."
-        },
-        {
             Icon: AiOutlineSetting,
             title: "MT Transmission",
             description: "It's an excellent choice for enthusiasts who appreciate the art of driving. At our rental company, we understand that preferences vary, and that's why we offer a range of vehicles with  MT options. Whether you're seeking convenience or a more interactive driving experience, we've got you covered."
